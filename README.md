@@ -33,6 +33,7 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 | `Start Server` | `Ctrl+Shift+R` | Launches the high-speed sync bridge. |
 | `Push All` | `Ctrl+Shift+U` | Force-pushes all files to Roblox. |
 | `Sync Status` | `Ctrl+Shift+S` | Checks host/client connection status. |
+| `Stop Server` | `Crtl+Shift+X` | Stops/Kills the local server on your device. |
 
 ---
 
