@@ -2,7 +2,7 @@
   <img src="icon.png" width="128" height="128" alt="Roblox Sync Pro Logo">
 </p>
 
-<h1 align="center">Roblox Sync Pro (Alpha)</h1>
+<h1 align="center">Roblox VSCode (Alpha)</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-v0.8.0--alpha-blue?style=for-the-badge" alt="Version">
