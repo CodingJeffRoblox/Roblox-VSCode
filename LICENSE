@@ -1,21 +1,28 @@
-MIT License
+# PROPRIETARY SOFTWARE LICENSE
+# ROBLOX VSCODE ⟨/⟩
 
-Copyright (c) 2025 CodingJeff
+**Copyright (c) 2026 CodingJeffRoblox. All rights reserved.**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+By downloading, installing, or using this software (Roblox VSCode), you agree to the following terms and conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+---
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### 1. OWNERSHIP AND LICENSING
+The Software is licensed, not sold. CodingJeffRoblox ("Author") retains all ownership, intellectual property rights, and copyright to the Software, including but not limited to the source code, branding, icons, and plugin logic.
+
+### 2. PERMITTED USE
+You are granted a non-exclusive, non-transferable license to download and use the Software for personal or professional game development within Roblox Studio.
+
+### 3. RESTRICTIONS
+You are strictly prohibited from:
+- **Modification:** You may not edit, modify, adapt, translate, or create derivative works of the Software (including the VS Code Extension and Studio Plugin).
+- **Redistribution:** You may not redistribute, sub-license, rent, lease, or lend the Software to any third party without express written permission from the Author.
+- **Commercial Sale:** You may not sell the Software, include it in a paid package, or use it for any commercial purpose that involves charging other users for the Software itself.
+- **Attribution:** You may not remove any copyright notices, branding, or Author credits from the Software. You may not claim authorship or take credit for the creation of the Software.
+- **Reverse Engineering:** You may not decompile, disassemble, or reverse engineer the compiled Software.
+
+### 4. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+
+---
+**Failure to comply with these terms may result in the immediate termination of your license to use the Software and may subject you to legal action.**
