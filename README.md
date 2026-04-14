@@ -35,13 +35,15 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 | `Sync Status` | `Ctrl+Shift+S` | Checks host/client connection status. |
 | `Stop Server` | `Crtl+Shift+X` | Stops/Kills the local server on your device. |
 
+
 ---
 
 ## 📦 Requirements & Setup
 
-1. Enable **Allow HTTP Requests** in Studio Game Settings.
-2. Press **Ctrl+Shift+P** in VS Code and run `Roblox Sync: Start Server`.
-3. Click **Connect** in the Studio plugin to link your experience.
+1. **Install the Roblox Plugin:** Download it from the [Roblox Creator Store](https://create.roblox.com/store/asset/133218039534822/Roblox-VSCode-080-Alpha).
+2. **Enable Permissions:** Open Studio Game Settings and enable **Allow HTTP Requests**.
+3. **Launch Server:** Press **Ctrl+Shift+R** in VS Code to start the sync bridge.
+4. **Connect:** Use the Studio plugin panel to link your project.
 
 ---
 
