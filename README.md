@@ -2,7 +2,7 @@
 **The ultimate real-time sync between Visual Studio Code and Roblox Studio.**
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/CodingJeffRoblox/Roblox-VSCode/releases)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/CodingJeffRoblox/Roblox-VSCode/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](https://github.com/CodingJeffRoblox/Roblox-VSCode/blob/main/LICENSE)
 
 ---
 
