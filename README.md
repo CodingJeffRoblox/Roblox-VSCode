@@ -1,65 +1,50 @@
-# Roblox VSCode ⟨/⟩
-**The ultimate real-time sync between Visual Studio Code and Roblox Studio.**
+<p align="center">
+  <img src="icon.png" width="128" height="128" alt="Roblox Sync Pro Logo">
+</p>
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/CodingJeffRoblox/Roblox-VSCode/releases)
-[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](https://github.com/CodingJeffRoblox/Roblox-VSCode/blob/main/LICENSE)
+<h1 align="center">Roblox Sync Pro (Alpha)</h1>
 
----
-
-## 🚀 Get Started
-
-To use Roblox VSCode, you need two components: the **VS Code Extension** and the **Roblox Studio Plugin**.
-
-### 1. Download VS Code Extension
-Install the pre-packaged extension to enable the sync server.
-
-*   **[Download .VSIX Extension](https://github.com/CodingJeffRoblox/Roblox-VSCode/raw/main/roblox-vscode-0.1.0.vsix)**
-*   **Installation:** In VS Code, go to the Extensions tab, click the **...** (three dots) in the top right, and select **Install from VSIX**.
-
-### 2. Download Roblox Studio Plugin
-This script enables the professional sync panel inside your game.
-
-*   **[Get SyncPlugin.lua](https://github.com/CodingJeffRoblox/Roblox-VSCode/raw/main/SyncPlugin.lua)**
-*   **Installation:** Create a new `ModuleScript` or `Script` in your Studio "Plugins" folder and paste the code from the link above.
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-v0.8.0--alpha-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
+</p>
 
 ---
 
-## 🛠️ How to Sync
+## 🚀 The professional bridge between VS Code and Roblox Studio.
 
-#### 1. Start the Server
-In VS Code, press **`Ctrl+Shift+R`**. You will see:
-`✅ Roblox Sync Server Listening on Port 8080`
+Stop context-switching. Edit your Roblox scripts in the world's most powerful code editor with full multi-window support, real-time sync, and professional team monitoring.
 
-#### 2. Connect in Studio
-1. Open your game in Roblox Studio.
-2. Go to the **Plugins** tab and open **VS Code Sync**.
-3. Click **⬆ CONNECT TO VS CODE**. 
-   *Your project folder will be created on your desktop and automatically opened in VS Code.*
+### 🌟 Key Features
 
-#### 3. Live Syncing
-Click **▶ START LIVE SYNC** in the Studio panel.
-*   **VS Code → Studio:** Save any file in VS Code to see it update in Roblox instantly.
-*   **Studio → VS Code:** Edit any script in Roblox and the file on your computer updates automatically.
+*   **🔄 Bi-Directional Synchronisation:** Sync flows both ways. Update in VS Code or Push from Studio back to your local environment.
+*   **🪟 Multi-Window Intelligence:** Cross-window communication automatically detects the host session.
+*   **📂 structure Management:** Automatic replication of files, folders, and nested trees.
+*   **🛡️ Studio Professional Suite:** Dockable panel with Activity Logs, Progress Bars, and Undo support.
+*   **📢 Discord Integration:** Automatic status updates via secure, obfuscated webhooks.
 
 ---
 
-## ⌨️ Shortcuts
+## ⌨️ Command Shortcuts
 
-| Action | VS Code Shortcut |
-|---|---|
-| **Start Server** | `Ctrl + Shift + R` |
-| **Stop Server** | `Ctrl + Shift + X` |
-| **Push All Files** | `Ctrl + Shift + U` |
-
----
-
-## 🛡️ Security & Privacy
-*   **Local Only:** All syncing happens on your own computer (`localhost`).
-*   **No Data Collection:** Your code never leaves your machine.
-*   **Safe Handshake:** The `/init` process ensures folders are only created when you physically click Connect.
+| Command | Keybind | Description |
+| --- | --- | --- |
+| `Start Server` | `Ctrl+Shift+R` | Launches the high-speed sync bridge. |
+| `Push All` | `Ctrl+Shift+U` | Force-pushes all files to Roblox. |
+| `Sync Status` | `Ctrl+Shift+S` | Checks host/client connection status. |
 
 ---
 
-## 📄 License
-This project is released under the **MIT License**.
-© 2025 CodingJeffRoblox
+## 📦 Requirements & Setup
+
+1. Enable **Allow HTTP Requests** in Studio Game Settings.
+2. Press **Ctrl+Shift+P** in VS Code and run `Roblox Sync: Start Server`.
+3. Click **Connect** in the Studio plugin to link your experience.
+
+---
+
+<p align="center">
+  <b>Developed by CodingJeffRoblox</b><br>
+  <i>Alpha Release v0.8.0</i>
+</p>
