@@ -4,7 +4,28 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ---
 
-## [0.8.0-Alpha] — 2026-04-14 (Current)
+## [0.10.0-Alpha] — 2026-04-18 (Current)
+### UX & Documentation Overhaul
+- **Interactive Walkthroughs**: Integrated native VS Code walkthroughs for step-by-step extension setup.
+- **Onboarding System**: Added an interactive tutorial to the Studio plugin that highlights and explains UI components to new users.
+- **Hosted Documentation**: Consistently formatted Layman, Technical, and Usage documentation now available on the official website.
+- **Fluid UI Animations**: Enhanced the Studio plugin with `TweenService` for smooth tab transitions and visual feedback.
+- **Expanded Settings**: Added Auto-Reconnect, Theme Cycling, and Sync Interval controls to the Studio plugin.
+- **VS Code Configuration**: New workspace settings for port customization, auto-sync toggles, and improved ignore pattern support.
+- **Fingerprinting Fixes**: Resolved hashing inconsistencies caused by Windows line endings (CRLF/LF) to ensure perfect differential syncing.
+
+## [0.9.0-Alpha] — 2026-04-15
+### Massive Core Overhaul (Performance & Stability)
+- **Differential Sync Engine**: Fully rewritten sync core using FNV-1a (32-bit) hashing to only sync modified files.
+- **Canonical Path System**: Unified path sanitization between VS Code and Roblox to eliminate path drift and special character bugs.
+- **VS Code Sync Dashboard**: Brand new Webview UI featuring real-time stats, project registry, and active error reporting.
+- **Conflict Management**: Implemented "IDE-Wins" conflict resolution with hash-based change awareness.
+- **Class Conversion**: Studio plugin now handles Folder-to-Script conversions and vice-versa seamlessly during sync.
+- **Improved Watcher**: Expanded VS Code file system watcher to track entire folder structures (`**/*`).
+- **Transparency & Trust**: Added a Transparency Report to the UI and a physical toggle for Analytics opt-in.
+- **Safety Backups**: Integrated `SetWaypoint` into every script update for instant rollback support in Studio.
+
+## [0.8.0-Alpha] — 2026-04-14
 ### Added
 - **Official Alpha Release**: Transitioned project from "Testing" to "Alpha".
 - **Bi-Directional Sync**: Added "Push to VS Code" button in Studio to overwrite IDE files with Studio code.
