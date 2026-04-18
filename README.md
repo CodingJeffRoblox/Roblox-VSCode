@@ -5,36 +5,42 @@
 <h1 align="center">Roblox VSCode (Alpha)</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v0.8.0--alpha-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v0.10.0--alpha-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
 </p>
 
 ---
 
-## 🚀 The professional bridge between VS Code and Roblox Studio.
-
-Stop context-switching. Edit your Roblox scripts in the world's most powerful code editor with full multi-window support, real-time sync, and professional team monitoring.
-
-### 🌟 Key Features
-
-*   **🔄 Bi-Directional Synchronisation:** Sync flows both ways. Update in VS Code or Push from Studio back to your local environment.
-*   **🪟 Multi-Window Intelligence:** Cross-window communication automatically detects the host session.
-*   **📂 structure Management:** Automatic replication of files, folders, and nested trees.
-*   **🛡️ Studio Professional Suite:** Dockable panel with Activity Logs, Progress Bars, and Undo support.
-*   **📢 Discord Integration:** Automatic status updates via secure, obfuscated webhooks.
+<img width="1024" height="1024" alt="v0_10_banner" src="https://github.com/user-attachments/assets/ba38831d-cd5c-4fbb-adba-24b0e22394a4" />
 
 ---
 
-## ⌨️ Command Shortcuts
+## 🚀 The professional bridge between VS Code and Roblox Studio.
 
+### [🌐 Official Website](https://roblox-vscode.wasmer.app) | [📖 Documentation](https://roblox-vscode.wasmer.app/docs.html)
+
+Stop context-switching. Edit your Roblox scripts in the world's most powerful code editor with full multi-window support, real-time sync, and professional team monitoring.
+
+*   **⚡ Professional UX:** Smooth animations, interactive onboarding, and custom themes in the Studio plugin.
+*   **📖 Integrated Documentation:** Native VS Code walkthroughs and a comprehensive online manual.
+*   **🚀 Differential Sync Engine:** High-performance FNV-1a hashing ensures only changed bytes are synced. 
+*   **🔄 Bi-Directional Synchronisation:** Sync flows both ways with perfect line-ending normalization.
+*   **📂 Canonical Pathing:** Shared sanitization rules ensure path consistency across platforms.
+*   **🛡️ Studio Professional Suite:** Dockable panel with Activity Logs, Conflict Detection, and Undo support.
+*   **📊 Sync Dashboard:** VS Code Webview with real-time stats and error diagnostics.
+
+---
+
+## ⌨️ Universal Keyboard Shortcuts
 | Command | Keybind | Description |
 | --- | --- | --- |
-| `Start Server` | `Ctrl+Shift+R` | Launches the high-speed sync bridge. |
-| `Push All` | `Ctrl+Shift+U` | Force-pushes all files to Roblox. |
-| `Sync Status` | `Ctrl+Shift+S` | Checks host/client connection status. |
-| `Stop Server` | `Crtl+Shift+X` | Stops/Kills the local server on your device. |
-
+| `Start Bridge` | `Ctrl+Alt+R` | Launches the high-speed sync bridge. |
+| `Push All`   | `Ctrl+Alt+U` | Pushes modified files to Studio (Differential). |
+| `Sync Status` | `Ctrl+Alt+L` | Checks host/client connection health. |
+| `Dashboard`   | `Ctrl+Alt+I` | Launches the Professional Sync Panel. |
+| `Sync Docs`   | `Ctrl+Alt+H` | Opens the official interactive manual. |
+| `Stop Bridge` | `Ctrl+Alt+X` | Stops/Kills the local server on your device. |
 
 ---
 
@@ -42,12 +48,12 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 
 1. **Install the Roblox Plugin:** Download it from the [Roblox Creator Store](https://create.roblox.com/store/asset/133218039534822/Roblox-VSCode-080-Alpha).
 2. **Enable Permissions:** Open Studio Game Settings and enable **Allow HTTP Requests**.
-3. **Launch Server:** Press **Ctrl+Shift+R** in VS Code to start the sync bridge.
-4. **Connect:** Use the Studio plugin panel to link your project.
+3. **Launch Bridge:** Press **Ctrl+Alt+R** in VS Code to start the local sync bridge.
+4. **Follow the Tutorial:** An interactive walkthrough will guide you through the first connection automatically.
 
 ---
 
 <p align="center">
   <b>Developed by CodingJeffRoblox</b><br>
-  <i>Alpha Release v0.8.0</i>
+  <i>Alpha Release v0.10.0</i>
 </p>
