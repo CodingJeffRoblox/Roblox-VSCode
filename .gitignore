@@ -4,3 +4,8 @@ out/
 *.map
 .DS_Store
 Thumbs.db
+.env
+.env.local
+__pycache__/
+*.pyc
+support-portal/admin_key.key

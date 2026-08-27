@@ -23,7 +23,7 @@ We love to see what you're building! Share your projects and show how the sync i
 If you have questions about how to set up the sync or if your files aren't appearing:
 1.  Read the **Troubleshooting** section in the [README](https://github.com/CodingJeffRoblox/Roblox-VSCode#readme).
 2.  Ensure your **Game Settings -> Security** has **Allow HTTP Requests** enabled.
-3.  Check that the VS Code server is active (**Ctrl+Shift+R**).
+3.  Check that the Local Bridge is active (**Ctrl+Alt+R**).
 
 ---
 © 2026 CodingJeffRoblox

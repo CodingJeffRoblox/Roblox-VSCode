@@ -5,14 +5,10 @@
 <h1 align="center">Roblox VSCode (Alpha)</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v0.10.0--alpha-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v0.11.0--alpha-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
 </p>
-
----
-
-<img width="1024" height="1024" alt="v0_10_banner" src="https://github.com/user-attachments/assets/ba38831d-cd5c-4fbb-adba-24b0e22394a4" />
 
 ---
 
@@ -55,5 +51,6 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 
 <p align="center">
   <b>Developed by CodingJeffRoblox</b><br>
-  <i>Alpha Release v0.10.0</i>
+  <i>Alpha Release v0.11.0</i>
 </p>
+#

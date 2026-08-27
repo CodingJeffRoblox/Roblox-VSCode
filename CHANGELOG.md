@@ -4,7 +4,26 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ---
 
-## [0.10.0-Alpha] — 2026-04-18 (Current)
+## [0.11.0-Alpha] — 2026-08-27 (Current)
+### New Features
+- **Conflict Resolution UI**: When a file changed in both VS Code and Studio since the last sync, the conflicting change is now held back and you're prompted to compare & choose ("Keep VS Code Version" / "Keep Studio Version" / diff view) instead of it always being silently overwritten. Resolve pending conflicts anytime via "Roblox Sync: Resolve Sync Conflicts".
+- **Switch Active Project**: New command to redirect the running bridge at a different previously-synced project (from the registry, or by browsing to a folder) without restarting the server. Warns before switching if Studio appears to be actively live-syncing.
+- **Selective Sync UI**: "Roblox Sync: Manage Selective Sync (Exclude Rules)" gives a checkbox picker over your project's top-level folders (plus custom patterns) instead of hand-editing `robloxSync.ignorePatterns`.
+- **Shared Library (cross-project reuse)**: "Export to Shared Library" (also in the Explorer right-click menu) copies a script/folder to a local shared library; "Import from Shared Library" drops it into any other project so it syncs to Studio on the next push.
+- **Failure reasons, not just failures**: When Studio fails to apply a file (unknown root, class-creation error, model import failure, wrong instance type, etc.), the activity log now shows *why* instead of just "❌ Failed: file". The reason also round-trips to VS Code's dashboard error log, and a file that's permanently given up on after repeated failures gets one clear final message with the last known reason.
+
+### Security & Reliability
+- Fixed a stored-XSS risk: ticket/chat messages, usernames, and other Firebase-sourced fields are now HTML-escaped before being rendered in the VS Code webviews.
+- Removed the Roblox OAuth scaffolding — it read from a config key that didn't match any setting and had no route ever wired to it, so it was silent dead code.
+- Fixed the Studio plugin's update-version comparison, which encoded versions as `minor*10` and would compare incorrectly once a two-digit minor/major bump or a pre-release tag (e.g. "-Alpha") shipped; it now parses proper `major.minor.patch` and ignores trailing tags (with back-compat for old numeric values already stored in Firebase).
+- Removed the wide-open `cors()` middleware from the local sync server — nothing legitimately needs cross-origin browser access to it, and leaving it enabled let any locally running webpage read its responses.
+- Added rate-limiting/lockout to `/init` pairing-code attempts to close a blind brute-force gap.
+- The sync dashboard now shows a rolling log of recent errors instead of only ever the single most recent one.
+- Fixed two path-safety bugs in the new Shared Library feature: importing could previously be pointed at the project root itself (destroying the whole project on overwrite), and exporting had no containment check on the snippet name.
+- Fixed conflict-resolution requests being able to fire duplicate diff/apply round trips if Studio's response was slower than one poll cycle, and fixed the auto-resolve timeout being able to silently override an already-made "Keep Studio Version" choice.
+- Stopped committing `support-portal/admin_key.key` and `__pycache__/` artifacts to git.
+
+## [0.10.0-Alpha] — 2026-04-18
 ### UX & Documentation Overhaul
 - **Interactive Walkthroughs**: Integrated native VS Code walkthroughs for step-by-step extension setup.
 - **Onboarding System**: Added an interactive tutorial to the Studio plugin that highlights and explains UI components to new users.
