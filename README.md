@@ -42,7 +42,7 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 
 ## 📦 Requirements & Setup
 
-1. **Install the Roblox Plugin:** Download it from the [Roblox Creator Store](https://create.roblox.com/store/asset/133218039534822/Roblox-VSCode-080-Alpha).
+1. **Install the Roblox Plugin:** Download it from the [Roblox Creator Store](https://create.roblox.com/store/asset/133579566308901/Roblox-VSCode).
 2. **Enable Permissions:** Open Studio Game Settings and enable **Allow HTTP Requests**.
 3. **Launch Bridge:** Press **Ctrl+Alt+R** in VS Code to start the local sync bridge.
 4. **Follow the Tutorial:** An interactive walkthrough will guide you through the first connection automatically.
