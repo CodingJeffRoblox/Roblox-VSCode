@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="icon.png" width="128" height="128" alt="Roblox Sync Pro Logo">
+  <img src="icon.png" width="128" height="128" alt="Roblox VSCode Logo">
 </p>
 
-<h1 align="center">Roblox VSCode (Alpha)</h1>
+<h1 align="center">Roblox VSCode</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v0.11.0--alpha-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v1.0.0-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge" alt="Status">
 </p>
 
 ---
@@ -37,6 +37,7 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 | `Dashboard`   | `Ctrl+Alt+I` | Launches the Professional Sync Panel. |
 | `Sync Docs`   | `Ctrl+Alt+H` | Opens the official interactive manual. |
 | `Stop Bridge` | `Ctrl+Alt+X` | Stops/Kills the local server on your device. |
+| `Team Members` | `Ctrl+Alt+T` | Lists everyone on this project's team. |
 
 ---
 
@@ -50,7 +51,7 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 ---
 
 <p align="center">
-  <b>Developed by CodingJeffRoblox</b><br>
-  <i>Alpha Release v0.11.0</i>
+  <b>Developed by CodingJeff</b><br>
+  <i>Official Release v1.0.0</i>
 </p>
 #

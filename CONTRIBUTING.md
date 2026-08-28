@@ -26,4 +26,4 @@ If you have questions about how to set up the sync or if your files aren't appea
 3.  Check that the Local Bridge is active (**Ctrl+Alt+R**).
 
 ---
-© 2026 CodingJeffRoblox
+© 2026 CodingJeff
