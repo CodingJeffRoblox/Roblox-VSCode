@@ -5,7 +5,7 @@
 <h1 align="center">Roblox VSCode</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v1.0.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v1.0.1-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge" alt="Status">
 </p>
@@ -52,6 +52,6 @@ Stop context-switching. Edit your Roblox scripts in the world's most powerful co
 
 <p align="center">
   <b>Developed by CodingJeff</b><br>
-  <i>Official Release v1.0.0</i>
+  <i>Official Release v1.0.1</i>
 </p>
 #
