@@ -4,7 +4,25 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ---
 
-## [1.0.0] — 2026-08-28 (Current)
+## [1.0.1] — 2026-08-29 (Current)
+
+### Added
+- **GUI edits made directly in Studio now sync to VS Code** — *Old problem:* editing or building a ScreenGui/frame/button etc. straight in Studio had no way to reach VS Code; only the very first connection snapshot ever captured GUI content, so any GUI change made after that just never left Studio. *Now:* Studio serializes changed GUI trees to `.rbxmx` and pushes them the same way scripts are pushed, completing the direction that already existed the other way (VS Code → Studio `.rbxmx` import).
+- **A new "What's New" tab in the Studio plugin**, listing what changed in the current version without needing to leave Studio.
+
+### Fixed
+- **Pushing from both sides in quick succession could silently override the other's edit, in either direction.** *Old problem:* the conflict baseline advanced whenever nothing was currently flagged as conflicted, not whenever the two sides actually agreed — a routine ordering (Studio's poll reporting its own edit slightly before the matching VS Code edit was queued) made the baseline silently adopt Studio's edit as "the agreed state" moments before a real conflict arrived, erasing it before there was anything to compare against. Studio's own `/push` also had no conflict awareness at all beyond what the poll loop had already flagged, and would overwrite on any hash difference. Both directions now correctly detect and hold back a genuine clash instead of silently discarding one side.
+- **Cross-side hashes rarely actually matched.** *Old problem:* the Studio plugin's `(h * prime) % 2^32` hash step looked like correct 32-bit wraparound, but Luau numbers are IEEE-754 doubles and the product regularly needed more precision than a double keeps exactly — it silently rounded before the modulo ran, so the plugin's hash diverged from the VS Code extension's exact-wraparound hash for almost any real content (verified: even "hello world" hashed differently). Every cross-side hash comparison this fed — conflict detection, initial project sync — was comparing hashes that would almost never match. Replaced with an exact equivalent.
+- **Renaming a script in Studio could leave a duplicate behind or lose the file.** The rename handler's own cleanup delete was unconditionally blocked by a guard that treated any internal call as recursion and no-opped it — the old instance was never actually removed.
+- **Two instances sharing a name (Roblox's own default for a new script/folder) silently overwrote each other's synced file**, on both the Studio → VS Code and VS Code → Studio paths. Same-named-and-same-type siblings are now ranked and disambiguated ("_2", "_3") consistently on both sides.
+- **A path-traversal gap in project setup** — a crafted game/folder name of "." or ".." was passed through the sanitizer untouched, which every caller then joined onto a trusted root directory. Hardened at the source, plus a defense-in-depth root check on connect.
+- **Deleting a script in Studio and pressing "Push to VS Code" did nothing on the VS Code side.** Neither half of the pipeline handled a deletion — the plugin's scan only ever looked for modified/new scripts, and the extension had no delete branch to receive one anyway. Both fixed.
+- **A pending conflict could get silently stomped by a manual Push**, and **a conflict that resolved itself before you picked a side** (Studio catching up on its own, etc.) used to leave a stale prompt or an empty diff behind instead of just closing quietly. Both fixed.
+- **The conflict diff view's "Studio" side showed a cryptic temp file path** instead of a readable label, and those temp files were never cleaned up. Replaced with a virtual document and a clear "VS Code (left) ↔ Studio (right)" tab title — no more filesystem writes for this at all.
+- **A second open VS Code window's dashboard always showed an empty/disconnected state**, even while sync was working fine in the first window — it had no way to know a host was already running elsewhere. It now mirrors the real host's data.
+- **Push / Force Sync could fail outright or hang for a full 2 minutes** on a machine where VS Code's bundled ripgrep binary was missing or broken (a broken install, antivirus quarantine, etc.) — both code paths depended on it internally. Replaced with a plain recursive file scan that has no such external dependency.
+
+## [1.0.0] — 2026-08-28
 
 ### 🎉 Out of Alpha
 First stable release. This version is the result of testing the full push/pull/conflict workflow end-to-end for the first time and fixing what that testing actually found, plus a full visual redesign of the Studio plugin, extension, and website.
