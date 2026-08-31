@@ -4,7 +4,20 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ---
 
-## [1.0.1] — 2026-08-29 (Current)
+## [1.0.2] — 2026-08-31 (Current)
+
+### Added
+- **Folders now sync both ways.** Previously a folder's existence was purely incidental to the files inside it — creating or deleting an empty folder (or one whose contents don't happen to individually trigger their own sync) generated no event at all, in either direction. Both VS Code and the Studio plugin now track folders as their own thing.
+- **Team tools** — "last seen" per member (surfaces data that already existed but was never shown anywhere), the owner can rename the team, and the owner can disband it entirely (click-twice-to-confirm; permanently deletes the roster and activity feed for everyone).
+
+### Fixed
+- **Pushing an updated GUI from VS Code could leave a duplicate behind in Studio instead of updating it in place.** *Old problem:* every other apply path (scripts, init files) updates its own cache immediately after writing, which is what stops the next "Push to VS Code" scan from seeing its own just-applied content as "changed in Studio" and re-exporting it right back — the GUI/`.rbxmx` import path never did this. That echo, combined with duplicate-name disambiguation, could turn one GUI into a second, orphaned file that re-imported against the wrong instance. *Now:* the GUI import path seeds the same cache scripts already do, both on live import and at connect time (previously every existing GUI was needlessly re-exported on the very first push after connecting, too).
+- **Deletes and renames only ever covered scripts, Studio → VS Code.** Deleting or renaming a folder or a GUI directly in Studio had no way to reach VS Code at all — the old file (or folder) was just left behind forever. Now covered the same way scripts already were.
+- **A real "Out of local registers" crash some users hit on load**, from the What's New tab added in 1.0.1 pushing the Studio plugin's script past Luau's 200-local ceiling.
+- **Conflict diffs could look far noisier than the real change.** *Old problem:* a line-ending mismatch between a local CRLF file (the Windows default) and Studio's LF content made every single line show as changed, even when nothing meaningful actually differed — the hash comparison that decides whether to show a diff at all already normalized this, but the diff's displayed content never did. *Now:* normalized to match whichever line ending the real local file already uses.
+- **The Studio plugin's Tutorial tab was thin and skipped the two things people actually get stuck on** (per the FAQ and support tickets): the pairing code, and enabling "Allow HTTP Requests." Rewritten from 3 steps to 5 accurate ones; the website's matching homepage section was fixed the same way.
+
+## [1.0.1] — 2026-08-29
 
 ### Added
 - **GUI edits made directly in Studio now sync to VS Code** — *Old problem:* editing or building a ScreenGui/frame/button etc. straight in Studio had no way to reach VS Code; only the very first connection snapshot ever captured GUI content, so any GUI change made after that just never left Studio. *Now:* Studio serializes changed GUI trees to `.rbxmx` and pushes them the same way scripts are pushed, completing the direction that already existed the other way (VS Code → Studio `.rbxmx` import).
