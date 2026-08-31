@@ -6,6 +6,8 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ## [1.0.2] — 2026-08-31 (Current)
 
+**How to get it & see what's new:** VS Code — grab `roblox-vscode-1.0.2.vsix` from the [v1.0.2 release](https://github.com/CodingJeffRoblox/Roblox-VSCode/releases/tag/v1.0.2) and install it via Extensions panel → **···** → **Install from VSIX...** (installs over the old version, no uninstall needed). Studio plugin — the Creator Store auto-updates it on next launch; reinstall from the [Creator Store listing](https://create.roblox.com/store/asset/133579566308901/Roblox-VSCode) if it doesn't. Then open the plugin panel → **More ▾** → **What's New** to see this list without leaving Studio.
+
 ### Added
 - **Folders now sync both ways.** Previously a folder's existence was purely incidental to the files inside it — creating or deleting an empty folder (or one whose contents don't happen to individually trigger their own sync) generated no event at all, in either direction. Both VS Code and the Studio plugin now track folders as their own thing.
 - **Team tools** — "last seen" per member (surfaces data that already existed but was never shown anywhere), the owner can rename the team, and the owner can disband it entirely (click-twice-to-confirm; permanently deletes the roster and activity feed for everyone).
