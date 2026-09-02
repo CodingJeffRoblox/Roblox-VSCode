@@ -4,9 +4,25 @@ All notable changes to the finished **Roblox VSCode** product are documented her
 
 ---
 
-## [1.0.2] — 2026-08-31 (Current)
+## [2.0.0] — 2026-09-02 (Current)
 
-**How to get it & see what's new:** VS Code — grab `roblox-vscode-1.0.2.vsix` from the [v1.0.2 release](https://github.com/CodingJeffRoblox/Roblox-VSCode/releases/tag/v1.0.2) and install it via Extensions panel → **···** → **Install from VSIX...** (installs over the old version, no uninstall needed). Studio plugin — the Creator Store auto-updates it on next launch; reinstall from the [Creator Store listing](https://create.roblox.com/store/asset/133579566308901/Roblox-VSCode) if it doesn't. Then open the plugin panel → **More ▾** → **What's New** to see this list without leaving Studio.
+**How to get it & see what's new:** VS Code — grab `roblox-vscode-2.0.0.vsix` from the [v2.0.0 release](https://github.com/CodingJeffRoblox/Roblox-VSCode/releases/tag/v2.0.0) and install it via Extensions panel → **···** → **Install from VSIX...** (installs over the old version, no uninstall needed). Studio plugin — the Creator Store auto-updates it on next launch; reinstall from the [Creator Store listing](https://create.roblox.com/store/asset/133579566308901/Roblox-VSCode) if it doesn't. Then open the plugin panel → **More ▾** → **What's New** to see this list without leaving Studio.
+
+### Added
+- **GitHub repo integration for Teams.** From Studio's Teams tab (owner-only), link your project to a real GitHub repo, push the synced files there with one click, and grant teammates real GitHub collaborator access by entering their GitHub username - a real invite goes out via GitHub's own API, not just an in-app permission. One repo per project, shared across every team member's bridge regardless of which machine connects.
+- **Roblox account verification is now actually real.** The "Connect Roblox Account" flow was quietly unverifiable before (it redirected to Roblox's real OAuth screen, but the site had no backend that could ever complete the token exchange, so it silently fell back to trusting whatever username someone typed and labeled it "Verified" anyway). Replaced with a profile-code ownership check: paste a one-time code into your Roblox profile's About section, we confirm it against Roblox's own public API. The "Verified" badge on the site now means something.
+
+### Fixed
+- **A real Studio crash, and reconnecting afterward doing nothing.** The full project tree walk (on Connect, and on every automatic reconnect) ran with zero yields - on a large project this could run long enough to hit Studio's script execution-time limit, which force-kills the thread mid-work. That skips straight past the line that frees up the Connect button for next time, permanently freezing it - so "reconnecting crashes it again" was really "the button silently stopped working after the first crash." Fixed both: the tree walk now yields periodically, and both reconnect paths are pcall-wrapped with a guaranteed reset regardless of what happens.
+- **Every custom icon in the plugin was invisible**, including the main Studio toolbar button - all 7 icon asset IDs turned out to not be real uploaded images. Replaced with emoji everywhere; no Roblox upload/moderation needed.
+- **The Connect button always said "Ensure Server is running" even when the real problem was a wrong or expired pairing code.** Now reads the actual server response and says so specifically (wrong/expired code, rate-limited after too many attempts, etc.) instead of sending you toward the wrong fix.
+- **Copy-to-clipboard links had no fallback when `setclipboard` was blocked or unavailable** - previously just logged the URL to the Output window for manual copy-paste. Now swaps in a real selected text field so Ctrl+C works regardless.
+- **The auto-generated AI coding-guidelines file (Ctrl+Alt+G) was named `.cursorules`** (missing a letter) - Cursor's actual convention is `.cursorrules`, so it was silently never picked up by the one tool it was made for. Also corrected a stale claim in its content ("VS Code always wins conflicts" - hasn't been true since the interactive conflict picker was built).
+
+### Changed
+- Live usage stats on the homepage and the Roblox-verification flow above no longer depend on Firebase Cloud Functions (which require a paid billing plan for any function that calls an external API) - moved to reading the Realtime Database directly and a Cloudflare Worker (free tier) respectively.
+
+## [1.0.2] — 2026-08-31
 
 ### Added
 - **Folders now sync both ways.** Previously a folder's existence was purely incidental to the files inside it — creating or deleting an empty folder (or one whose contents don't happen to individually trigger their own sync) generated no event at all, in either direction. Both VS Code and the Studio plugin now track folders as their own thing.
